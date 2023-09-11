@@ -9,7 +9,7 @@ while ($row = $result->fetch()) {
         <div class="card">
             <div class="card-body" style="    box-shadow: 0px 1px 7px 0px #e91e6317;
     border-bottom: 3px solid #e91e63;">
-                <span class="action_box">
+                <span class="action_box" style="color:#e91e63">
                     <span title="Remove task"><i class="fas fa-trash" onclick="deleteTask(<?php echo $row['task_id']; ?>)"></i></span>
                     <span title="Edit task"><i class="fas fa-edit" onclick="setIdToFormForModifyContent(event)" post-id="<?php echo $row['task_id']; ?>" data-bs-toggle="modal" data-bs-target="#modalEdit"></i></span>
                     <span title="Move to pending"><i class="fas fa-arrow-right" onclick="moveTo(<?php echo $row['task_id']; ?>,'pending')"></i></span>
