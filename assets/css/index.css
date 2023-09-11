@@ -1,0 +1,162 @@
+body {
+    background-color: whitesmoke !important;
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    width: 100vw;
+}
+
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    background-color: #ffd867;
+}
+
+.logo-container img {
+    max-width: 400px;
+}
+
+.btn-primary {
+    border: none;
+}
+
+a {
+    color: #003489;
+}
+
+@media (max-width: 575.98px) {
+    .login-container {
+        grid-template-columns: 100%;
+    }
+
+    .logo-container {
+        display: none;
+    }
+}
+
+.white-box {
+    margin-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 767px) {
+    .white-box {
+
+        background-color: white;
+        width: 30%;
+        padding: 2%;
+        box-shadow: -9px 9px 0px 0px #ededed;
+        margin-top: 5%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 3px solid #e91e71;
+    }
+}
+
+.form-control,
+.form-contro:focus,
+.form-control:focus-visible,
+.form-control:focus-within,
+.form-control:active {
+    height: 5% !important;
+    background: #ededed;
+    border-color: #ededed;
+    color: #464646;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #464646;
+}
+
+.navbar-brand {
+    color: #393939;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.brand_top {
+    color: #393939;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.alertsAuth {
+    color: #c9145e;
+    font-size: 14px;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+}
+
+.alertsAuthEmail {
+    color: #c9145e;
+    font-size: 14px;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+.navbar_top {
+    box-shadow: 1px 1px 5px 0px #dfd9d9;
+    background-color: white !important;
+}
+
+.navbar_fixed {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #ffffff !important;
+}
+
+.options {
+    color: #afafaf
+}
+
+.loginTitle {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500
+}
+
+#markTitle {
+    color: #e91e71;
+}
+
+.btnSubmit:hover {
+    background-color: #e91e71 !important;
+    transition: 0.3s;
+}
+
+.brand_bottom {
+    width: 100%;
+    position: fixed;
+    font-size: 14px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    padding: 15px;
+    bottom: 0;
+}
+
+#markTitleBottom {
+    color: #e91e71;
+
+}
+
+.iam {
+    display: block;
+    cursor:pointer !important;
+    float: right;
+    margin-right: 2%
+}
