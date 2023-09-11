@@ -4,6 +4,19 @@ function activeSignUp() {
     regForm.classList.remove('d-none');
     loginForm.classList.add('d-none');
 }
+async function showPass() {
+    const pass = document.getElementById('password');
+    const basicAddon = document.getElementById('basic-addon2');
+    if (pass.getAttribute('type') === 'password') {
+        basicAddon.innerHTML = "<i class='fas fa-eye-slash'></i>"
+        pass.removeAttribute('type');
+        pass.setAttribute('type', 'text');
+    } else {
+        basicAddon.innerHTML = "<i class='fas fa-eye'></i>"
+        pass.removeAttribute('type');
+        pass.setAttribute('type', 'password');
+    }
+}
 
 function activeSignIn() {
     const regForm = document.getElementById('reg-form');
@@ -92,7 +105,7 @@ async function formValidationReg() {
                     button: false,
                     timer: 1000
                 })
-                 activeSignIn();
+                activeSignIn();
                 return true;
             } else {
                 swal({

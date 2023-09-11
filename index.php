@@ -51,8 +51,12 @@ if (isset($_COOKIE['token']) && !empty($_COOKIE['token']) || isset($_SESSION['us
                         <div class="mt-3 mb-3">
                             <span class=" alertsAuthEmail  animate__headShake animate__animated"></span>
                         </div>
-                        <div class="mb-2">
+                        <!-- <div class="mb-2">
                             <input type="password" onchange="formValidation('onchange')" class="form-control" name="password" placeholder="Password">
+                        </div> -->
+                        <div class="input-group mb-3">
+                            <input type="password" id="password" class="form-control" placeholder="Password" name="password" aria-describedby="basic-addon2">
+                            <span class="input-group-text" onclick="showPass()" id="basic-addon2"><i class="fas fa-eye"></i></span>
                         </div>
                         <div class="mt-3 mb-3">
                             <span class="alertsAuth  animate__headShake animate__animated"></span>
