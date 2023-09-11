@@ -109,7 +109,7 @@ async function formValidationReg() {
 async function sendForm(data) {
     const formData = data;
     try {
-        const response = await fetch('http://localhost/DatafiTasks/controllers/auth.php', {
+        const response = await fetch('http://localhost/WorkTest/controllers/auth.php', {
             method: 'POST',
             body: formData
         });

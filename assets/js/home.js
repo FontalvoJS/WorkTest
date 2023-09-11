@@ -42,7 +42,7 @@ async function formRequest() {
 async function sendFormRequest(data) {
     const formData = data;
     try {
-        const response = await fetch('http://localhost/DatafiTasks/controllers/saveTask.php', {
+        const response = await fetch('http://localhost/WorkTest/controllers/saveTask.php', {
             method: 'POST',
             body: formData
         });
@@ -78,7 +78,7 @@ async function deleteTask(id) {
 }
 async function sendDeleteTask(id) {
     try {
-        const response = await fetch('http://localhost/DatafiTasks/controllers/deleteTask.php', {
+        const response = await fetch('http://localhost/WorkTest/controllers/deleteTask.php', {
             method: 'POST',
             body: JSON.stringify({
                 id: id
@@ -128,7 +128,7 @@ async function formEditRequest(val) {
 async function sendFormEditRequest(data) {
     const formData = data;
     try {
-        const response = await fetch('http://localhost/DatafiTasks/controllers/modifyTask.php', {
+        const response = await fetch('http://localhost/WorkTest/controllers/modifyTask.php', {
             method: 'POST',
             body: formData
         });
@@ -157,7 +157,7 @@ async function moveTo(id, moveTo) {
 }
 async function sendMoveTo(id, moveTo) {
     try {
-        const response = await fetch('http://localhost/DatafiTasks/controllers/moveTo.php', {
+        const response = await fetch('http://localhost/WorkTest/controllers/moveTo.php', {
             method: 'POST',
             body: JSON.stringify({
                 id: id,
