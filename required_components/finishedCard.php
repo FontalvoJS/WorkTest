@@ -1,24 +1,7 @@
 <?php
 require_once '../controllers/dbConnection.php';
-$getTasks = "SELECT 
-users.id AS user_id,
-users.name AS user_name,
-users.email AS user_email,
-tasks.id AS task_id,
-tasks.title AS task_title,
-tasks.description AS task_description,
-tasks.date_post AS task_date_post,
-tasks.dateToFinish AS task_date_to_finish,
-tasks.status AS task_status
-FROM 
-users 
-LEFT JOIN 
-tasks
-ON users.id = tasks.id_user
-WHERE tasks.status = 'finished'
-ORDER BY 
-users.id";
-$result = $pdo->query($getTasks);
+require_once '../controllers/getTasks.php';
+$result = getTasks('finished',$pdo);
 while ($row = $result->fetch()) {
     if (isset($row['task_status']) && !empty($row['task_status'])) {
 ?>

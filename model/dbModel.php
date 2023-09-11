@@ -123,7 +123,7 @@ class taskManagerModel
             return json_encode($err);
         }
     }
-    public function getTasks()
+    public function getTasks($type)
     {
         $getTasks = "SELECT 
         users.id AS user_id,
@@ -140,10 +140,12 @@ class taskManagerModel
         LEFT JOIN 
         tasks
         ON users.id = tasks.id_user
-        WHERE tasks.status = 'standby'
+        WHERE tasks.status = :type
         ORDER BY 
         users.id";
-        $result = $this->pdo->query($getTasks);
+        $result = $this->pdo->prepare($getTasks);
+        $result->bindParam(':type', $type);
+        $result->execute();
         return $result;
     }
 }

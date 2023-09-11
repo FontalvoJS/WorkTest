@@ -1,8 +1,7 @@
 <?php
 require_once '../controllers/dbConnection.php';
-require '../model/dbModel.php';
-$model = new taskManagerModel($pdo);
-$result = $model->getTasks();
+require_once '../controllers/getTasks.php';
+$result = getTasks('standby',$pdo);
 while ($row = $result->fetch()) {
     if (isset($row['task_status']) && !empty($row['task_status'])) {
 ?>
