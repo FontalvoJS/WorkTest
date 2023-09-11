@@ -2,6 +2,7 @@
 require_once 'dbConnection.php';
 require_once 'dataSanitizer.php';
 require_once '../model/dbModel.php';
+
 $model = new taskManagerModel($pdo);
 if (isset($_POST['email']) && isset($_POST['login']) && isset($_POST['password'])) {
     $email = sanitizeInput($_POST['email']);

@@ -1,5 +1,6 @@
 <?php
 require '../model/dbModel.php';
+
 function getTasks($tipo, $pdo)
 {
     require 'dbConnection.php';
