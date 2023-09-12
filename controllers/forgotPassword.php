@@ -17,8 +17,6 @@ function sendEmail($email)
         $mail->isSMTP();
         $mail->Host = 'smtp.outlook.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'fontalvo_js@hotmail.com';
-        $mail->Password = '1470Caro_';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
